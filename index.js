@@ -5,7 +5,7 @@ const client = new Client({ checkUpdate: false });
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
     client.user.setStatus('dnd'); 
+    client.user.setActivity(null); // This forces Discord to wipe the old status card
 });
 
-// DO NOT paste your token here. Keep it exactly as process.env.DISCORD_TOKEN
 client.login(process.env.DISCORD_TOKEN);
